@@ -1,0 +1,125 @@
+/* b:\All\1\jj2b\css\style.css */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #0b0c10;
+    color: #ffffff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/png.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.theme-text {
+    color: #ef4444; /* Red color */
+}
+
+.theme-bg {
+    background-color: #ef4444;
+}
+
+.theme-border {
+    border-color: #ef4444;
+}
+
+.card {
+    background-color: rgba(26, 28, 35, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid #2d2f36;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #ef4444;
+    box-shadow: 0 10px 30px rgba(239, 68, 68, 0.2);
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ef4444;
+}
+
+.nav-link.active {
+    color: #ef4444;
+    font-weight: bold;
+    border-bottom: 2px solid #ef4444;
+}
+
+/* Animation for the main logo */
+@keyframes float {
+    0% { transform: translate(-50%, -50%) translateY(0px); }
+    50% { transform: translate(-50%, -50%) translateY(-25px); }
+    100% { transform: translate(-50%, -50%) translateY(0px); }
+}
+
+.floating-logo {
+    animation: float 3.5s ease-in-out infinite;
+}
+
+/* Glow effect */
+.glow {
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.5);
+}
+
+.status-online {
+    color: #10b981;
+}
+
+.status-offline {
+    color: #ef4444;
+}
+
+/* Security: Disable selection of certain texts if needed (Optional) */
+.no-select {
+    user-select: none;
+}
+
+/* Custom Cursor */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ef4444;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+.cursor-follower {
+    width: 8px;
+    height: 8px;
+    background-color: #ef4444;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease;
+}
+
+/* Hide default cursor on interactive elements if desired */
+/* a, button { cursor: none; } */
+
+/* AOS Customizations */
+[data-aos] {
+    transition-duration: 1000ms !important;
+}
